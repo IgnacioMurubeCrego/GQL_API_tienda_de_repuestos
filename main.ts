@@ -8,6 +8,8 @@ import { GraphQLError } from "graphql";
 
 const MONGO_URL = Deno.env.get("MONGO_URL");
 
+console.log("MONGO_URL:", Deno.env.get("MONGO_URL"));
+
 if (!MONGO_URL) {
 	throw new GraphQLError("Please provide MONGO_URL for database connection.");
 }
